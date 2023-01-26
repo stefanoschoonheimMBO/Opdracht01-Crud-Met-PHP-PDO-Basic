@@ -21,8 +21,11 @@
         <label for="lastname">Achternaam:</label><br>
         <input type="text" id="lastname" name="lastname"><br>
         <br>
-        <label for="mobiel">Telefoonnummer:</label>
-        <input type="text" id="mobiel" name="mobiel"><br>
+        <label for="mobiel">Telefoonnummer:</label><br>
+        <input type="text" id="mobiel" name="phone"><br>
+        <br>
+        <label for="mobiel">StraatNaam:</label><br>
+        <input type="text" id="StraatNaam" name="streetname"><br>
         <br>
         <input type="submit" value="Verstuur">
 
