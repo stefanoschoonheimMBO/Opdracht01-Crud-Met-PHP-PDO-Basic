@@ -21,6 +21,9 @@
         <label for="lastname">Achternaam:</label><br>
         <input type="text" id="lastname" name="lastname"><br>
         <br>
+        <label for="mobiel">Telefoonnummer:</label>
+        <input type="text" id="mobiel" name="mobiel"><br>
+        <br>
         <input type="submit" value="Verstuur">
 
     </form>

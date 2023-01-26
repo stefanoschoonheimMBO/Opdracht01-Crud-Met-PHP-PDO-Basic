@@ -26,6 +26,7 @@
                   ,Voornaam
                   ,Tussenvoegsel
                   ,Achternaam
+                  ,Mobiel
             FROM Persoon
             ORDER BY Id";
 
@@ -45,6 +46,7 @@
                     <td>$info->Voornaam</td>
                     <td>$info->Tussenvoegsel</td>
                     <td>$info->Achternaam</td>
+                    <td>$info->Mobiel</td>
                     <td>
                         <a href='delete.php?id={$info->Id}'>
                             <img src='img/b_drop.png' alt='kruis'>
@@ -68,6 +70,7 @@
         <th>Voornaam</th>
         <th>Tussenvoegsel</th>
         <th>Achternaam</th>
+        <th>Mobiel</th>
         <th></th>
         <th></th>   
     </thead>
