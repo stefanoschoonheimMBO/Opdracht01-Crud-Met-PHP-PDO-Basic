@@ -32,6 +32,9 @@
         <br>
         <label for="woonplaats">Woonplaats</label><br>
         <input type="text" id="Woonplaats" name="residence"><br>
+        <br>
+        <label for="postcode">Postcode</label><br>
+        <input type="text" id="Postcode" name="zip" ><br>
         <input type="submit" value="Verstuur">
 
     </form>
