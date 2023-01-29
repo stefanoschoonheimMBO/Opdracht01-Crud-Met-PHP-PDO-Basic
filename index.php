@@ -27,6 +27,8 @@
         <label for="mobiel">StraatNaam:</label><br>
         <input type="text" id="StraatNaam" name="streetname"><br>
         <br>
+        <label for="huisnummer">Huisnummer</label><br>
+        <input type="text" id="Huisnummer" name="housenumber"><br>
         <input type="submit" value="Verstuur">
 
     </form>
