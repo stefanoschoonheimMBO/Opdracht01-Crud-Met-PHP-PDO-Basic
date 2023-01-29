@@ -29,6 +29,9 @@
         <br>
         <label for="huisnummer">Huisnummer</label><br>
         <input type="text" id="Huisnummer" name="housenumber"><br>
+        <br>
+        <label for="woonplaats">Woonplaats</label><br>
+        <input type="text" id="Woonplaats" name="residence"><br>
         <input type="submit" value="Verstuur">
 
     </form>
@@ -40,5 +43,4 @@
 </html>
 
 <?php
-    echo "1" + 1;
 ?>
