@@ -19,9 +19,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     var_dump($_POST);
     try {
         $sql = "UPDATE Persoon
-                SET    Voornaam = :Voornaam,
+                SET Voornaam = :Voornaam,
                     Tussenvoegsel = :Tussenvoegsel,
-                    Achternaam = :Achternaam
+                    Achternaam = :Achternaam,
+                    Mobiel = :Mobiel,
+                    StraatNaam = :StraatNaam,
+                    HuisNummer = :HuisNummer,
+                    Woonplaats = :Woonplaats,
+                    Postcode = :Postcode,
+                    Landnaam = :Landnaam
+
                 WHERE Id = :Id";
 
         $statement = $pdo->prepare($sql);
@@ -29,6 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $statement->bindValue(':Voornaam', $_POST['firstname'], PDO::PARAM_STR);
         $statement->bindValue(':Tussenvoegsel', $_POST['infix'], PDO::PARAM_STR);
         $statement->bindValue(':Achternaam', $_POST['lastname'], PDO::PARAM_STR);
+        $statement->bindValue(':Mobiel', $_POST['phone'], PDO::PARAM_STR);
+        $statement->bindValue(':StraatNaam', $_POST['streetname'], PDO::PARAM_STR);
+        $statement->bindValue(':HuisNummer', $_POST['housenumber'], PDO::PARAM_STR);
+        $statement->bindValue(':Woonplaats', $_POST['residence'], PDO::PARAM_STR);
+        $statement->bindValue(':Postcode', $_POST['zip'], PDO::PARAM_STR);   
+        $statement->bindValue(':Landnaam', $_POST['country'], PDO::PARAM_STR);
 
         $statement->execute();
 
@@ -44,6 +57,12 @@ $sql = "SELECT Id
               ,Voornaam as VN
               ,Tussenvoegsel as TV
               ,Achternaam as AN
+              ,Mobiel as MB
+              ,StraatNaam as SN
+              ,HuisNummer as HN
+              ,Woonplaats as WP
+              ,Postcode as PC
+              ,Landnaam as LN
         FROM Persoon
         WHERE Id = :Id";
 
@@ -84,6 +103,23 @@ var_dump($result);
         <label for="lastname">Achternaam:</label><br>
         <input type="text" id="lastname" name="lastname" value="<?= $result->AN ?>"><br>
         <br>
+        <label for="mobiel">Telefoonnummer:</label><br>
+        <input type="text" id="mobiel" name="phone" value="<?= $result-> MB?>"><br>
+        <br>
+        <label for="mobiel">StraatNaam:</label><br>
+        <input type="text" id="StraatNaam" name="streetname" value="<?= $result-> SN?>"><br>
+        <br>
+        <label for="huisnummer">Huisnummer</label><br>
+        <input type="text" id="Huisnummer" name="housenumber" value="<?= $result-> HN?>"><br>
+        <br>
+        <label for="woonplaats">Woonplaats</label><br>
+        <input type="text" id="Woonplaats" name="residence" value="<?= $result-> WP?>"><br>
+        <br>
+        <label for="postcode">Postcode</label><br>
+        <input type="text" id="Postcode" name="zip" value="<?= $result-> PC?>"><br>
+        <br>
+        <label for="landnaam">Landnaam</label><br>
+        <input type="text" id="Landnaam" name="country" value="<?= $result-> LN?>"><br>
         <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
         <input type="submit" value="Verstuur">
 

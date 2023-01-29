@@ -26,6 +26,12 @@
                   ,Voornaam
                   ,Tussenvoegsel
                   ,Achternaam
+                  ,Mobiel
+                  ,StraatNaam
+                  ,HuisNummer
+                  ,Woonplaats
+                  ,Postcode
+                  ,Landnaam
             FROM Persoon
             ORDER BY Id";
 
@@ -45,6 +51,12 @@
                     <td>$info->Voornaam</td>
                     <td>$info->Tussenvoegsel</td>
                     <td>$info->Achternaam</td>
+                    <td>$info->Mobiel</td>
+                    <td>$info->StraatNaam</td>
+                    <td>$info->HuisNummer</td>
+                    <td>$info->Woonplaats</td>
+                    <td>$info->Postcode</td>
+                    <td>$info->Landnaam</td>
                     <td>
                         <a href='delete.php?id={$info->Id}'>
                             <img src='img/b_drop.png' alt='kruis'>
@@ -68,6 +80,12 @@
         <th>Voornaam</th>
         <th>Tussenvoegsel</th>
         <th>Achternaam</th>
+        <th>Mobiel</th>
+        <th>StraatNaam</th>
+        <th>HuisNummer</th>
+        <th>Woonplaats</th>
+        <th>Postcode</th>
+        <th>Landnaam</th>
         <th></th>
         <th></th>   
     </thead>

@@ -21,6 +21,23 @@
         <label for="lastname">Achternaam:</label><br>
         <input type="text" id="lastname" name="lastname"><br>
         <br>
+        <label for="mobiel">Telefoonnummer:</label><br>
+        <input type="text" id="mobiel" name="phone"><br>
+        <br>
+        <label for="mobiel">StraatNaam:</label><br>
+        <input type="text" id="StraatNaam" name="streetname"><br>
+        <br>
+        <label for="huisnummer">Huisnummer</label><br>
+        <input type="text" id="Huisnummer" name="housenumber"><br>
+        <br>
+        <label for="woonplaats">Woonplaats</label><br>
+        <input type="text" id="Woonplaats" name="residence"><br>
+        <br>
+        <label for="postcode">Postcode</label><br>
+        <input type="text" id="Postcode" name="zip" ><br>
+        <br>
+        <label for="landnaam">Landnaam</label><br>
+        <input type="text" id="Landnaam" name="country"><br>
         <input type="submit" value="Verstuur">
 
     </form>
@@ -32,5 +49,4 @@
 </html>
 
 <?php
-    echo "1" + 1;
 ?>
